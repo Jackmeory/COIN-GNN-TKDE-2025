@@ -1,0 +1,65 @@
+{
+    "begin_year": 2010,
+    "end_year": 2018,
+    "dropout": 0.0,
+    "batch_size": 32,
+    "gpuid": 0,
+    "loss": "mse",
+    "type":"non-traffic",
+    "buffer_size":100,
+    "validation_size":30,
+    "lr":0.01,
+    "ratio":0.3,
+    "tao":1.0,
+    "cl":1.0,
+    "warn_ratio":0.05,
+    "ewc_lambda":0.0001,
+    "start_selection":47,
+    "en":[1812, 1844, 1876, 1900, 1954, 1987, 2000, 2023, 2048],
+    "activation": "relu",
+    "scheduler": "epo",
+    "train": 1,
+    "y_len": 12,
+    "x_len": 12,
+    "window":24,
+    "raw":1,
+    "data_process": 0,
+    "auto_test": 1,
+    "raw_data_path": "data/humidity/data/",
+    "save_data_path": "data/humidity/data/",
+    "graph_path": "data/humidity/graph/",
+    "model_path": "res/humidity/",
+    "gcn":{
+        "in_channel": 12,
+        "out_channel": 12,
+        "hidden_channel": 64
+    },
+
+    "tcn":{
+        "in_channel": 1,
+        "out_channel": 1,
+        "kernel_size": 3,
+        "dilation": 1
+    },
+
+
+    "logname": "INFGNNTemperature",
+    
+
+    "strategy": "incremental",
+    "init": true,
+    "increase": true,
+    "num_hops": 2,
+    
+    "detect": true,
+    "detect_strategy": "feature",
+
+    "ewc": true,
+    "ewc_strategy": "ewc", 
+    
+    "replay": true,
+    "replay_strategy": "random",
+    "repaly_num_samples": 100,
+
+    "buffer_selection": true
+}

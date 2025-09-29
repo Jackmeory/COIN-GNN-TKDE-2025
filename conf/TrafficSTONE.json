@@ -1,0 +1,66 @@
+{
+    "begin_year": 2011,
+    "end_year": 2017,
+    "dropout": 0.0,
+    "batch_size": 128,
+    "gpuid": 0,
+    "loss": "mse",
+    "type":"traffic",
+    "buffer_size":1000,
+    "validation_size":100,
+    "lr":0.03,
+    "ratio":0.5,
+    "tao":1,
+    "cl":0.01,
+    "warn_ratio":0.01,
+    "ewc_lambda":0.0001,
+    "epoch":50,
+    "start_selection":46,
+    "en":[655, 715, 786, 822, 834, 850, 871],
+    "activation": "relu",
+    "scheduler": "epo",
+    "train": 1,
+    "y_len": 12,
+    "x_len": 12,
+    "window":288,
+    "raw":0,
+    "data_process": 0,
+    "auto_test": 1,
+    "raw_data_path": "data/district3F11T17/finaldata/",
+    "save_data_path": "data/district3F11T17/FastData/",
+    "graph_path": "data/district3F11T17/graph/",
+    "model_path": "res/district3F11T17/",
+    "gcn":{
+        "in_channel": 12,
+        "out_channel": 12,
+        "hidden_channel": 64
+    },
+
+    "tcn":{
+        "in_channel": 1,
+        "out_channel": 1,
+        "kernel_size": 3,
+        "dilation": 1
+    },
+
+
+    "logname": "INFGNNTraffic",
+    
+
+    "strategy": "incremental",
+    "init": true,
+    "increase": false,
+    "num_hops": 2,
+    
+    "detect": true,
+    "detect_strategy": "feature",
+
+    "ewc": true,
+    "ewc_strategy": "ewc", 
+    
+    "replay": true,
+    "replay_strategy": "random",
+    "repaly_num_samples": 100,
+
+    "buffer_selection": true
+}
